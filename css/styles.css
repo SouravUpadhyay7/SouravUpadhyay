@@ -26,7 +26,9 @@ html {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Mina", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: var(--primary-bg);
     color: var(--text-color);
     line-height: 1.6;
@@ -220,6 +222,9 @@ a:hover {
 }
 
 .section-title {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
@@ -394,8 +399,10 @@ header {
 
 /* Futuristic Name Styling */
 .futuristic-name {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
+    font-family: "Reggae One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
     font-size: 1.1em;
     letter-spacing: 2px;
     background: linear-gradient(to right, var(--accent-purple), var(--accent-blue), var(--accent-green), var(--accent-red));
@@ -531,7 +538,7 @@ header {
 .education-item {
     background-color: var(--secondary-bg);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 50px;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
@@ -548,6 +555,7 @@ header {
     width: 100px;
     height: 100px;
     margin-bottom: 1rem;
+    border-radius: 50% ;
 }
 
 .edu-details {
@@ -567,8 +575,9 @@ header {
 }
 
 .achievement-item {
-    background-color: var(--secondary-bg);
+    
     border-radius: 10px;
+    border: #1565c0 2px solid;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
@@ -580,7 +589,7 @@ header {
 }
 
 .achievement-img {
-    height: 200px;
+    height: 400px;
     overflow: hidden;
 }
 
