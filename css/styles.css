@@ -621,7 +621,7 @@ header {
 }
 
 .skill-item {
-    background-color: var(--secondary-bg);
+    border: royalblue 2px solid;
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
