@@ -235,66 +235,7 @@ animationStyle.textContent = `
 `;
 document.head.appendChild(animationStyle);
 
-// Mouse Trail Effect
-function createMouseTrail() {
-    const maxTrailLength = 15;
-    const trailElements = [];
-    
-    // Create trail elements
-    for (let i = 0; i < maxTrailLength; i++) {
-        const trail = document.createElement('div');
-        trail.className = 'trail';
-        document.body.appendChild(trail);
-        trailElements.push({
-            element: trail,
-            x: 0,
-            y: 0,
-            size: Math.max(3, 10 - i * 0.5), // Decreasing size
-            alpha: Math.max(0.03, 0.5 - i * 0.03), // Decreasing opacity
-            hue: i * 10 // Different color for each trail
-        });
-    }
-    
-    // Mouse move event
-    let mouseX = 0;
-    let mouseY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        // Update first trail position immediately
-        if (trailElements.length > 0) {
-            trailElements[0].x = mouseX;
-            trailElements[0].y = mouseY;
-        }
-    });
-    
-    // Update trail positions
-    function updateTrail() {
-        // For each trail element (except the first one, which follows mouse directly)
-        for (let i = trailElements.length - 1; i > 0; i--) {
-            // Make each trail follow the one before it
-            trailElements[i].x = trailElements[i - 1].x;
-            trailElements[i].y = trailElements[i - 1].y;
-        }
-        
-        // Update DOM elements
-        trailElements.forEach((trail, index) => {
-            const { element, x, y, size, alpha, hue } = trail;
-            
-            element.style.width = `${size}px`;
-            element.style.height = `${size}px`;
-            element.style.backgroundColor = `hsla(${hue}, 100%, 60%, ${alpha})`;
-            element.style.opacity = alpha;
-            element.style.transform = `translate(${x - size / 2}px, ${y - size / 2}px)`;
-        });
-        
-        requestAnimationFrame(updateTrail);
-    }
-    
-    updateTrail();
-}
+
 
 // Interactive Parallax Effect on Scroll
 function createParallaxEffect() {
