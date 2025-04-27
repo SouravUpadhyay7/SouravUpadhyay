@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Iceland&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Square&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yatra+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Iceland&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Square&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yatra+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Iceland&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mina:wght@400;700&family=Nova+Square&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reggae+One&family=Space+Grotesk:wght@300..700&family=Syncopate:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yatra+One&display=swap');
+    </style>
+    <style>
+
+        .body{
+            font-family: "Mina", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
         .certificates-page {
             min-height: 100vh;
             padding-top: 100px;
@@ -27,6 +42,28 @@
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
         }
+
+
+        .certificate-item {
+    border: 2px solid var(--accent-blue);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    padding: 1rem;
+    height: auto; /* Ensure the height adjusts dynamically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.certificate-item img {
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio of the image */
+    object-fit: contain; /* Ensure the image fits within the box without being cut */
+    margin-bottom: 1rem;
+}
     </style>
 </head>
 <body>
@@ -34,7 +71,7 @@
     
     <!-- Navigation -->
     <header>
-        <div class="logo">Portfolio</div>
+        <div class="logo"> [SU] - Certificates</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html#about">About</a></li>
@@ -65,55 +102,155 @@
             <div class="certificates-grid">
                 <!-- Original 4 certificates from homepage -->
                 <div class="certificate-item">
-                    <img src="images/certificate1.jpg" alt="Certificate 1">
+                    <img src="images/certificates/app-udemy.jpg" alt="Certificate 1">
                     <h3>Certificate Title 1</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate2.jpg" alt="Certificate 2">
+                    <img src="images/certificates/certificatedjango.jpg" alt="Certificate 2">
                     <h3>Certificate Title 2</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate3.jpg" alt="Certificate 3">
+                    <img src="images/certificates/cn.jpeg" alt="Certificate 3">
                     <h3>Certificate Title 3</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate4.jpg" alt="Certificate 4">
+                    <img src="images/certificates/datasciencewithpython.jpeg" alt="Certificate 4">
                     <h3>Certificate Title 4</h3>
                     <p>Issuing Organization</p>
                 </div>
                 
                 <!-- Additional certificates -->
                 <div class="certificate-item">
-                    <img src="images/certificate5.jpg" alt="Certificate 5">
+                    <img src="images/certificates/elementsofai.jpeg" alt="Certificate 5">
                     <h3>Certificate Title 5</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate6.jpg" alt="Certificate 6">
+                    <img src="images/certificates/forage CWB_page-0001.jpg" alt="Certificate 6">
                     <h3>Certificate Title 6</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate7.jpg" alt="Certificate 7">
+                    <img src="images/certificates/forage verizon.jpeg" alt="Certificate 7">
                     <h3>Certificate Title 7</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate8.jpg" alt="Certificate 8">
+                    <img src="images/certificates/FutureLearn&Accenture DigitalSkills_AI.jpg" alt="Certificate 8">
                     <h3>Certificate Title 8</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate9.jpg" alt="Certificate 9">
+                    <img src="images/certificates/FutureLearn&Accenture DigitalSkills_AI_achievments.jpg" alt="Certificate 9">
                     <h3>Certificate Title 9</h3>
                     <p>Issuing Organization</p>
                 </div>
                 <div class="certificate-item">
-                    <img src="images/certificate10.jpg" alt="Certificate 10">
+                    <img src="images/certificates/geeksforgeeks.jpeg" alt="Certificate 10">
                     <h3>Certificate Title 10</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/gsssoc.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 11</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/HackerRank - problem solving basics.jpg" alt="Certificate 10">
+                    <h3>Certificate Title 12</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/hackerrank.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 13</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/introtocopilot.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 14</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/introtollm.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 15</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/introtosqlsi.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 15</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/k-python.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 16</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/learnambassador.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 17</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/LetsUpgrade Cpp.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 18</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/web-udemy.jpg" alt="Certificate 10">
+                    <h3>Certificate Title 19</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/University of Helsinki - Elements of AI.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 20</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/Sourav Upadhyay.png" alt="Certificate 10">
+                    <h3>Certificate Title 21</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/Simplilearn Certificate.jpg" alt="Certificate 10">
+                    <h3>Certificate Title 22</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/Simplilearn Certificate (1).jpg" alt="Certificate 10">
+                    <h3>Certificate Title 23</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/postman.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 24</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/pandas-c.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 25</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/numpy-C.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 26</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/mlsa-wrkshp.jpeg" alt="Certificate 10">
+                    <h3>Certificate Title 27</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/level2.jpg" alt="Certificate 10">
+                    <h3>Certificate Title 28</h3>
+                    <p>Issuing Organization</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="images/certificates/Level 3 Certificate_page-0001.jpg" alt="Certificate 10">
+                    <h3>Certificate Title 29</h3>
                     <p>Issuing Organization</p>
                 </div>
             </div>
@@ -121,7 +258,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Sourav Upadhyay. All Rights Reserved.</p>
     </footer>
 
     <a href="#" class="back-to-top">
