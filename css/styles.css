@@ -594,7 +594,7 @@ header {
     border-left-color: var(--accent-green);
 }
 
-.education-card.upcoming {
+.education-card.Ongoing {
     border-left-color: var(--accent-blue);
 }
 
