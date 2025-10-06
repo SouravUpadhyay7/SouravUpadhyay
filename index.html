@@ -53,7 +53,9 @@
     
     <!-- Navigation -->
     <header>
-        <div class="logo"> [SU] </div>
+        <div class="logo">
+            <img src="images/logooo.png" alt="SU Logo" class="logo-image">
+        </div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -86,10 +88,15 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="profile-pic">
-                <img src="images/mypic.jpg" alt="Profile Picture">
+                <img src="images/new ghibli.png" alt="Profile Picture">
             </div>
             <div class="about-text">
                 <p>I am an AI/ML and Data Science enthusiast with strong programming skills in Python and C++. Currently exploring Django development, I have a solid foundation in Data Structures and Algorithms. I am ranked among the top 4 students in my college on GeeksforGeeks. I am currently pursuing my Bachelor of Technology from Bengal Institute of Technology (Kolkata), graduating in 2027.</p>
+                <div class="resume-button-container">
+                    <a href="https://drive.google.com/your-resume-link-here" target="_blank" class="resume-button">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -99,7 +106,7 @@
     <h2 class="section-title">Education</h2>
     <div class="education-timeline">
         <!-- School -->
-        <div class="education-card completed">
+        <div class="education-card completed animate-card">
             <div class="education-logo">
                 <img src="images/logo/DAV.png" alt="School Logo">
             </div>
@@ -112,7 +119,7 @@
         </div>
 
         <!-- College -->
-        <div class="education-card Ongoing">
+        <div class="education-card Ongoing animate-card" style="animation-delay: 0.3s;">
             <div class="education-logo">
                  <img src="images/logo/bit.jpeg" alt="School Logo">
             </div>
@@ -126,7 +133,7 @@
         </div>
 
         <!-- Additional Education Card -->
-         <div class="education-card Ongoing">
+         <div class="education-card Ongoing animate-card" style="animation-delay: 0.6s;">
             <div class="education-logo">
                  <img src="images/logo/geeksfg.jpg" alt="School Logo">
             </div>
@@ -370,6 +377,7 @@
 
     <!-- Enhanced Contact Section -->
 <section id="contact" class="contact">
+    <div id="contact-canvas"></div>
     <h2 class="section-title">Contact Me</h2>
     <div class="contact-container">
         <!-- Glowing Form -->
@@ -441,6 +449,8 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/contact-animation.js"></script>
     <script src="js/script.js"></script>
 </body>
-</html> 
+</html>
