@@ -3,14 +3,14 @@ import { Briefcase, MapPin, Calendar } from "lucide-react";
 
 // Import company logos
 import innobytelogo from "@/assets/company-logos/innobyte.jpeg";
-import MCKinsey from "@/assets/company-logos/download.png";
+import MCKinsey from "@/assets/company-logos/mckinsey.png";
 import AIWallah from "@/assets/company-logos/ai wallah.jpeg";
 
 const internships = [
   {
     
   role: "Forward Program Fellow",
-  company: "McKinsey & Company",
+  company: "McKinsey.Org",
   location: "Remote",
   period: "Oct 2025 - Present", 
   description: "Completing McKinsey's 10-week intensive program focused on future-ready workplace skills including structured problem-solving, digital fluency, and impactful communication",
