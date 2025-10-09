@@ -60,7 +60,7 @@ const Hero = () => {
               className="space-y-4"
             >
               <h2 className="font-orbitron text-2xl md:text-3xl text-primary">
-                AI ML Dev | Python Dev
+                AI & ML Dev | Python Dev
               </h2>
               <p className="font-inter text-lg text-muted-foreground leading-relaxed">
                 Passionate about leveraging artificial intelligence and machine learning to solve real-world problems. 

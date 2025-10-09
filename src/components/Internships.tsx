@@ -1,45 +1,60 @@
 import { motion } from "framer-motion";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
 
+// Import company logos
+import innobytelogo from "@/assets/company-logos/innobyte.jpeg";
+import MCKinsey from "@/assets/company-logos/download.png";
+import AIWallah from "@/assets/company-logos/ai wallah.jpeg";
+
 const internships = [
   {
-    role: "Full Stack Developer Intern",
-    company: "Tech Company A",
-    location: "City, Country",
-    period: "Jun 2023 - Aug 2023",
-    description: "Developed and maintained web applications using React and Node.js",
-    achievements: [
-      "Built a customer dashboard that increased user engagement by 40%",
-      "Optimized database queries reducing load time by 60%",
-      "Collaborated with a team of 8 developers using Agile methodology",
-    ],
-    tags: ["React", "Node.js", "MongoDB", "AWS"],
+    
+  role: "Forward Program Fellow",
+  company: "McKinsey & Company",
+  location: "Remote",
+  period: "Oct 2025 - Present", 
+  description: "Completing McKinsey's 10-week intensive program focused on future-ready workplace skills including structured problem-solving, digital fluency, and impactful communication",
+  achievements: [
+    "Mastered structured problem-solving frameworks and creative thinking methodologies",
+    "Developed advanced communication skills for clear and inspiring stakeholder engagement",
+    "Built digital toolkit expertise for navigating modern workplace challenges",
+  ],
+  tags: ["Problem Solving", "Communication", "Digital Fluency", "Leadership"],
+  
+
+  logo: MCKinsey,
   },
+
+
   {
-    role: "Frontend Developer Intern",
-    company: "Tech Company B",
-    location: "Remote",
-    period: "Jan 2023 - May 2023",
-    description: "Created responsive user interfaces and improved user experience",
-    achievements: [
-      "Redesigned landing page increasing conversion rate by 25%",
-      "Implemented accessibility features meeting WCAG standards",
-      "Reduced bundle size by 40% through code optimization",
-    ],
-    tags: ["React", "TypeScript", "TailwindCSS", "Figma"],
+    role: "Generative AI Developer Intern",
+    company: "AI Wallah",
+    location: "Kolkata, INDIA -- Remote",
+    period: "Jul 2025 - Oct 2025 ",
+   description: "Worked on Generative AI and LLM projects, developing and deploying AI models for real-world applications",
+achievements: [
+  "Gained hands-on experience in developing and deploying generative AI models",
+  "Built real-world AI projects focusing on LLM integration and prompt engineering",
+  "Developed skills in Generative AI development through practical implementation",
+],
+tags: ["Python", "Generative AI", "LLM", "Machine Learning"],
+    logo: AIWallah,
   },
+
+
   {
-    role: "Software Engineering Intern",
-    company: "Tech Company C",
-    location: "City, Country",
-    period: "Jun 2022 - Aug 2022",
-    description: "Worked on backend services and API development",
+    role: "Python Developer Intern",
+    company: "Innobyte Services",
+    location: "Delhi, INDIA -- Remote",
+    period: "June 2025 - July 2025",
+    description: "Worked on Python-based finance tracker with user authentication, transactions, budgets, reports, and data export. Modular architecture for scalability.",
     achievements: [
-      "Developed RESTful APIs serving 10k+ daily requests",
-      "Implemented automated testing increasing code coverage to 85%",
-      "Documented technical specifications for the development team",
+      "Built secure multi-user authentication system with SQLite database integration",
+      "Developed comprehensive financial tracking with transactions, budgets, and automated reports",
+      "Designed modular CLI architecture with backup/export functionality for scalability",
     ],
-    tags: ["Python", "Django", "PostgreSQL", "Docker"],
+    tags: ["Python", "SQLite", "CLI", "Financial Management"],
+    logo: innobytelogo,
   },
 ];
 
@@ -47,7 +62,7 @@ const Internships = () => {
   return (
     <section id="internships" className="py-20 relative overflow-hidden">
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -92,11 +107,22 @@ const Internships = () => {
                     className="group relative"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
+
                     <div className="relative bg-card/40 backdrop-blur-xl border border-primary/30 rounded-2xl p-8 shadow-glass transition-all duration-300 group-hover:border-accent/60 group-hover:shadow-glow-purple">
-                      {/* Logo placeholder - top right corner */}
-                      <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center overflow-hidden group-hover:border-accent/50 transition-all duration-300">
-                        <span className="text-xs text-muted-foreground font-inter">Logo</span>
+                      
+                      {/* Logo image - top right corner */}
+                      <div className="absolute top-4 right-4 w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border-2 border-accent/30 flex items-center justify-center overflow-hidden group-hover:border-accent/50 transition-all duration-300 group-hover:scale-110">
+                        <img
+                          src={internship.logo}
+                          alt={`${internship.company} Logo`}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to placeholder if logo is missing
+                            e.currentTarget.onerror = null;
+                            const firstLetter = internship.company.charAt(0);
+                            e.currentTarget.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23667eea'/%3E%3Ctext x='50' y='50' font-size='40' text-anchor='middle' dy='.3em' fill='white' font-family='Arial'%3E${firstLetter}%3C/text%3E%3C/svg%3E`;
+                          }}
+                        />
                       </div>
 
                       <div className="flex items-start gap-6">
@@ -106,7 +132,7 @@ const Internships = () => {
                           </div>
                         </div>
 
-                        <div className="flex-1 space-y-4 pr-16 md:pr-0">
+                        <div className="flex-1 space-y-4 pr-20 md:pr-24">
                           <div>
                             <h3 className="font-orbitron text-2xl font-bold text-foreground group-hover:text-accent transition-colors">
                               {internship.role}
