@@ -1,30 +1,34 @@
-
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 
+// Import project images
+import snifternImage from "@/assets/projects/Gemini_Generated_Image_r9zal0r9zal0r9za.png";
+import ParkIn from "@/assets/projects/Gemini_Generated_Image_mfwd3mmfwd3mmfwd.png";
+import Collab_Sphere from "@/assets/projects/Gemini_Generated_Image_1yedhd1yedhd1yed.png";
+
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with payment integration and real-time inventory management.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "#",
-    demo: "#",
+    title: "SnifTern.ai",
+    description: "SnifTern.ai is an AI-powered platform that detects fake internship postings and verifies company legitimacy using advanced machine learning. It offers real-time fraud analysis, multi-platform integration (LinkedIn, Indeed, Glassdoor), PDF reports, and multi-language support to protect students from scams.",
+    image: snifternImage,
+    tags: ["Python", "NLP", "Machine Learning", "Flask"],
+    github: "https://github.com/SouravUpadhyay7/SnifTern.ai",
+    demo: "https://sniftern-ai.onrender.com/",
   },
   {
-    title: "AI Chat Application",
-    description: "Real-time chat application powered by AI with natural language processing capabilities.",
-    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop",
-    tags: ["Next.js", "OpenAI", "WebSocket", "PostgreSQL"],
-    github: "#",
-    demo: "#",
+    title: "ParkIn",
+    description: "ParkIn is a smart, cross-platform parking app that lets users find, book, and manage parking spaces in real time while enabling property owners to earn from vacant spots. It features AI-driven recommendations, an eco-friendly UI, and planned integration with IoT sensors and ANPR systems.",
+    image: ParkIn,
+    tags: ["Flask", "Flutter", "AI & ML", "SupaBase"],
+    github: "https://github.com/SouravUpadhyay7/ParkIn",
+    demo: "https://parking-app-lilac.vercel.app",
   },
   {
-    title: "Portfolio Dashboard",
-    description: "Analytics dashboard for tracking portfolio performance with interactive charts and insights.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    tags: ["React", "D3.js", "TailwindCSS", "Firebase"],
-    github: "#",
+    title: "Collab_Sphere",
+    description: "A full-stack college community platform featuring real-time chat, smart notifications, and role-based access. Built with Django, deployed on Render, and designed with a sleek dark-themed UI.",
+    image: Collab_Sphere,
+    tags: ["Django", "PostgreSQL", "TailwindCSS", "FullStack"],
+    github: "https://github.com/SouravUpadhyay7/Collab_Sphere",
     demo: "#",
   },
 ];
