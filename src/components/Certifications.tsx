@@ -72,6 +72,77 @@ const Certifications = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
+              {/* Animated border lines */}
+              <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">
+                <motion.div
+                  className="absolute top-0 left-0 right-0 h-1"
+                  style={{
+                    background: 'linear-gradient(90deg, transparent 0%, rgba(244, 63, 94, 0.9) 50%, transparent 100%)',
+                    backgroundSize: '40% 100%',
+                    boxShadow: '0 0 10px rgba(244, 63, 94, 0.8)',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 0%', '200% 0%'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'linear',
+                  }}
+                />
+                <motion.div
+                  className="absolute top-0 right-0 bottom-0 w-1"
+                  style={{
+                    background: 'linear-gradient(180deg, transparent 0%, rgba(168, 85, 247, 0.9) 50%, transparent 100%)',
+                    backgroundSize: '100% 40%',
+                    boxShadow: '0 0 10px rgba(168, 85, 247, 0.8)',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 0%', '0% 200%'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    delay: 0.5,
+                  }}
+                />
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-1"
+                  style={{
+                    background: 'linear-gradient(270deg, transparent 0%, rgba(244, 63, 94, 0.9) 50%, transparent 100%)',
+                    backgroundSize: '40% 100%',
+                    boxShadow: '0 0 10px rgba(244, 63, 94, 0.8)',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 0%', '200% 0%'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    delay: 1,
+                  }}
+                />
+                <motion.div
+                  className="absolute top-0 left-0 bottom-0 w-1"
+                  style={{
+                    background: 'linear-gradient(0deg, transparent 0%, rgba(168, 85, 247, 0.9) 50%, transparent 100%)',
+                    backgroundSize: '100% 40%',
+                    boxShadow: '0 0 10px rgba(168, 85, 247, 0.8)',
+                  }}
+                  animate={{
+                    backgroundPosition: ['0% 200%', '0% 0%'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    delay: 1.5,
+                  }}
+                />
+              </div>
+              
               <div className="relative bg-card/40 backdrop-blur-xl border border-primary/30 rounded-xl overflow-hidden shadow-glass transition-all duration-300 group-hover:border-accent/60">
                 <div className="relative h-48 overflow-hidden">
                   <img
