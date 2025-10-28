@@ -51,7 +51,7 @@ const Certifications = () => {
         >
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
-              Certifications
+              Certifications.pkl
             </span>
           </h2>
           <p className="font-inter text-muted-foreground text-lg">

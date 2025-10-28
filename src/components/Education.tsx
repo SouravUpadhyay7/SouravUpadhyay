@@ -51,7 +51,7 @@ const Education = () => {
         >
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-              Education
+              Education.log
             </span>
           </h2>
           <p className="font-inter text-muted-foreground text-lg">

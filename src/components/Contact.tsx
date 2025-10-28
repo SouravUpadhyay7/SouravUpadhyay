@@ -40,7 +40,7 @@ const Contact = () => {
         >
           <h2 className="font-orbitron text-4xl md:text-5xl font-bold mb-4">
             <span className="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent">
-              Get In Touch
+              Connect.py
             </span>
           </h2>
           <p className="font-inter text-muted-foreground text-lg">
