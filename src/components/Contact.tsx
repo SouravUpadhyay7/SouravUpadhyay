@@ -21,9 +21,9 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub", color: "primary" },
-    { icon: Linkedin, href: "#", label: "LinkedIn", color: "secondary" },
-    { icon: Mail, href: "mailto:your.email@example.com", label: "Email", color: "accent" },
+    { icon: Github, href: "https://github.com/SouravUpadhyay7", label: "GitHub", color: "primary" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/sourav-upadhyay-00a975276/", label: "LinkedIn", color: "secondary" },
+    { icon: Mail, href: "souravupadhyay383@gmail.com", label: "Email", color: "accent" },
   ];
 
   return (
