@@ -1,39 +1,38 @@
 import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
 
+// Import certificate images from assets folder
+import CastAI from "@/assets/certificates/CastAI_Module_Reporting - Copy.png";
+import gfg from "@/assets/certificates/gfg_comple ml & ds certificate_page-0001.jpg";
+import simplilearn from "@/assets/certificates/datasciencewithpython.jpeg";
+
+
 const certifications = [
   {
-    title: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "2024",
-    credentialId: "AWS-12345",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    title: "CastAI Module Reporting",
+    issuer: "CastAI",
+    date: "2025",
+    credentialId: "IKlujWY70q07tCbZuOa9Nw",
+    link: "https://academy.cast.ai/certifications/IKlujWY70q07tCbZuOa9Nw/",
+    image: CastAI,
   },
   {
-    title: "Google Cloud Professional Developer",
-    issuer: "Google Cloud",
-    date: "2023",
+    title: "Complete ML and DS program",
+    issuer: "Geeksforgeks",
+    date: "2025",
     credentialId: "GCP-67890",
     link: "#",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop",
+    image: gfg,
   },
   {
     title: "Meta Front-End Developer",
-    issuer: "Meta",
-    date: "2023",
-    credentialId: "META-54321",
+    issuer: "simplilearn",
+    date: "2024",
+    credentialId: "4964797",
     link: "#",
-    image: "https://drive.google.com/drive/folders/1U4I5SB-MyeQjiIjDYrpyl9bEcBxJPbrj",
+    image: simplilearn,
   },
-  {
-    title: "Certified Kubernetes Administrator",
-    issuer: "Cloud Native Computing Foundation",
-    date: "2022",
-    credentialId: "CKA-98765",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop",
-  },
+
 ];
 
 const Certifications = () => {
