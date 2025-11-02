@@ -24,7 +24,7 @@ const certifications = [
     date: "2023",
     credentialId: "META-54321",
     link: "#",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
+    image: "https://drive.google.com/drive/folders/1U4I5SB-MyeQjiIjDYrpyl9bEcBxJPbrj",
   },
   {
     title: "Certified Kubernetes Administrator",
