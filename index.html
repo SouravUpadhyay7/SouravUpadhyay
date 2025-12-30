@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sourav__Upadhyay</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Serif+4:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="crt">
+    <div class="cursor"></div>
+    <header class="header">
+      <div
+        style="
+          position: absolute;
+          top: 12px;
+          right: 20px;
+          font-size: 11px;
+          letter-spacing: 2px;
+          color: var(--muted);
+          font-family: monospace;
+        "
+      >
+        EST. 2026 • NO FRAMEWORKS • JUST VIBES
+      </div>
+      <div class="header-left">
+        <h1>Sourav Upadhyay</h1>
+        <p class="typewriter">Python • ML • AI • Data Analysis</p>
+        <p
+          style="
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 8px;
+            max-width: 420px;
+          "
+        >
+          I like things simple. I am lazy enough to not overdesign this
+          portfolio,<br />
+          but smart enough to let it still look good.😁🙂
+        </p>
+      </div>
+      <div style="display: flex; gap: 12px">
+        <div class="resume-dropdown">
+          <button class="resume-btn">Download Resume ▾</button>
+          <div class="resume-menu">
+            <a href="#">Python + AI</a>
+            <a href="#">ML Engineer</a>
+            <a href="#">Data Analyst</a>
+          </div>
+        </div>
+
+        <div class="resume-dropdown">
+          <button
+            class="resume-btn"
+            style="
+              background: transparent;
+              color: var(--text);
+              border: 1px solid var(--border);
+            "
+          >
+            Coding Profiles ▾
+          </button>
+          <div class="resume-menu">
+            <a href="#">TUF</a>
+            <a href="#">GeeksforGeeks</a>
+            <a href="#">HackerRank</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <!-- TERMINAL OVERLAY -->
+      <div
+        id="terminal"
+        style="
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          width: 420px;
+          max-width: 90%;
+          background: var(--bg);
+          border: 1px solid var(--border);
+          font-family: monospace;
+          font-size: 13px;
+          z-index: 1000;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        "
+      >
+        <div
+          style="
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+            font-size: 12px;
+          "
+        >
+          Terminal v1.0
+          <span style="float: right; cursor: pointer" onclick="toggleTerminal()"
+            >✕</span
+          >
+        </div>
+        <div
+          id="term-output"
+          style="
+            padding: 10px;
+            max-height: 180px;
+            overflow-y: auto;
+            color: var(--muted);
+          "
+        ></div>
+        <div style="padding: 10px; border-top: 1px solid var(--border)">
+          &gt;
+          <input
+            id="term-input"
+            style="
+              background: none;
+              border: none;
+              color: var(--text);
+              outline: none;
+              width: 90%;
+              font-family: monospace;
+            "
+            placeholder="open projects / open projects/ml-prediction"
+          />
+        </div>
+      </div>
+      <!-- TABLE OF CONTENTS -->
+      <nav
+        style="
+          font-family: monospace;
+          font-size: 13px;
+          color: var(--muted);
+          margin-bottom: 30px;
+        "
+      >
+        <strong>CONTENTS</strong><br />
+        <a href="#about">01 About</a> · <a href="#education">02 Education</a> ·
+        <a href="#certifications">03 Certifications</a> ·
+        <a href="#projects">04 Projects</a> · <a href="#tech">05 Tech</a> ·
+        <a href="#contact">06 Contact</a>
+      </nav>
+      <div
+        style="
+          border: 2px solid #8b0000;
+          background: rgba(139, 0, 0, 0.08);
+          padding: 14px 18px;
+          margin: 30px 0;
+          font-family: monospace;
+          font-size: 13px;
+          color: #8b0000;
+          box-shadow: 0 0 12px rgba(139, 0, 0, 0.4);
+          animation: fadeUp 0.8s ease;
+        "
+      >
+        <strong>⚠ SYSTEM NOTICE</strong><br />
+        DO NOT press the <strong>`</strong> key to open my terminal.<br />
+        Seriously. Don't.<br />
+        Unless you are a <em>Linus-level nerd</em> who enjoys poking things that
+        were intentionally hidden.<br />
+        You have been warned.
+      </div>
+      <blockquote
+        style="
+          font-family: 'Playfair Display', serif;
+          font-style: italic;
+          border-left: 3px solid var(--border);
+          padding-left: 16px;
+          margin: 40px 0;
+          color: var(--muted);
+        "
+      >
+        "Simplicity is achieved not when there is nothing more to add, but when
+        there is nothing left to remove."
+      </blockquote>
+
+      <section class="box" id="about">
+        <span
+          style="
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--muted);
+          "
+          >01</span
+        >
+        <h2>✦ About</h2>
+        <p>
+          Minimal black and white portfolio focused on Python development,
+          Machine Learning, Artificial Intelligence and Data Analysis.
+        </p>
+      </section>
+      <section class="box" id="education">
+        <span
+          style="
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--muted);
+          "
+          >02</span
+        >
+        <h2>❖ Education</h2>
+        <p>Bachelor's Degree • Science & Technology</p>
+      </section>
+      <section class="box" id="certifications">
+        <span
+          style="
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--muted);
+          "
+          >03</span
+        >
+        <h2>◈ Certifications</h2>
+        <div class="tag-wrap">
+          <a class="tag" href="#">Python Basics</a
+          ><a class="tag" href="#">Advanced Python</a
+          ><a class="tag" href="#">Machine Learning Intro</a
+          ><a class="tag" href="#">Data Analysis</a
+          ><a class="tag" href="#">AI Fundamentals</a
+          ><a class="tag" href="#">Statistics for ML</a>
+        </div>
+      </section>
+      <section class="box" id="projects">
+        <span
+          style="
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--muted);
+          "
+          >04</span
+        >
+        <h2>✶ Projects</h2>
+        <div class="tag-wrap">
+          <a class="tag" href="#">ML Prediction System</a
+          ><a class="tag" href="#">Data Analytics Dashboard</a
+          ><a class="tag" href="#">AI Chatbot</a
+          ><a class="tag" href="#">Python Automation Tool</a
+          ><a class="tag" href="#">Dataset Cleaning Pipeline</a
+          ><a class="tag" href="#">Model Evaluation Script</a>
+        </div>
+      </section>
+      <section class="box" id="tech">
+        <span
+          style="
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--muted);
+          "
+          >05</span
+        >
+        <h2>⌘ Tech Stack</h2>
+        <p>Python, Pandas, NumPy, Scikit-learn, SQL</p>
+      </section>
+      <section class="box" id="contact">
+        <span
+          style="
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-family: monospace;
+            font-size: 11px;
+            color: var(--muted);
+          "
+          >06</span
+        >
+        <h2>☍ Contact</h2>
+        <p>
+          <a href="#">GitHub</a> • <a href="#">LinkedIn</a> •
+          <a href="#">Email</a>
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <p style="font-family: monospace; font-size: 12px; margin-bottom: 10px">
+        * Footnote: Yes, this portfolio intentionally avoids fancy frameworks. I
+        am tired.
+      </p>
+      <p style="font-family: monospace; font-size: 11px; margin-bottom: 6px">
+        LAST UPDATED: 2025-01-01 • STILL ALIVE
+      </p>
+      <p
+        style="font-family: monospace; letter-spacing: 1px; margin-bottom: 6px"
+      >
+        HAND-CRAFTED • MINIMAL • SLIGHTLY LAZY
+      </p>
+      © 2025 Your Name
+    </footer>
+
+    
+    <script src="script.js"></script>
+  </body>
+</html>
