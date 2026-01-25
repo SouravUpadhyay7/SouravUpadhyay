@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications | Sourav Upadhyay</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .cert-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            aspect-ratio: 4/3;
+            background: var(--card-bg);
+            border: 1px solid var(--navbar-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .cert-card img {
+            width: 80%;
+            height: auto;
+            opacity: 0.6;
+            transition: all 0.5s ease;
+        }
+
+        .cert-card:hover {
+            box-shadow: 0 0 30px var(--glow-color);
+            transform: scale(1.05);
+        }
+
+        .cert-card:hover img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .cert-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, var(--bg-color));
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover .cert-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1" style="left: auto; right: -100px;"></div>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle-btn">
+        <i class="ri-moon-line"></i>
+    </button>
+
+    <main>
+        <section class="reveal">
+            <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 40px;">Professional Certifications</h2>
+            <div class="grid">
+                <!-- Cert 1 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/c1.png" alt="AWS Certified Solutions Architect">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">AWS Associate Architect</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Issued: Jan 2025</p>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/c2.png" alt="DeepLearning.AI TensorFlow Developer">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">TensorFlow Developer</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Issued: Nov 2024</p>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/c3.png" alt="Google Data Analytics Professional">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">Data Analytics Professional</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Issued: Sept 2024</p>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/c4.png" alt="Microsoft Azure AI Fundamentals">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">Azure AI Fundamentals</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Issued: July 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="navbar-container">
+        <div class="navbar">
+            <a href="index.html" class="navbar-item">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="navbar-item">
+                <i class="ri-user-line"></i>
+                <span>About</span>
+            </a>
+            <a href="projects.html" class="navbar-item">
+                <i class="ri-code-s-slash-line"></i>
+                <span>Projects</span>
+            </a>
+            <a href="certifications.html" class="navbar-item active">
+                <i class="ri-award-line"></i>
+                <span>Certs</span>
+            </a>
+            <a href="contact.html" class="navbar-item">
+                <i class="ri-mail-line"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

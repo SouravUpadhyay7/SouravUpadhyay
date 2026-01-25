@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sourav Upadhyay</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .project-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 16px;
+            background: var(--accent-gradient);
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--navbar-bg);
+            border: 1px solid var(--navbar-border);
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-3"></div>
+        <div class="blob blob-2" style="bottom: 0; left: 0;"></div>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle-btn">
+        <i class="ri-moon-line"></i>
+    </button>
+
+    <main>
+        <section class="reveal">
+            <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 40px;">Featured Projects</h2>
+            <div class="grid">
+                <!-- Project 1 -->
+                <div class="card">
+                    <div class="project-img">
+                        <img src="assets/projects/p1.jpg" alt="Neural Network Visualizer">
+                    </div>
+                    <h3>Neural Network Visualizer</h3>
+                    <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
+                        An interactive tool to visualize deep learning architectures in real-time. Built with WebGL and
+                        React.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Three.js</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <a href="#"
+                        style="display: block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
+                        Explore Project <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card">
+                    <div class="project-img">
+                        <img src="assets/projects/p2.jpg" alt="Crypto Sentinel">
+                    </div>
+                    <h3>Crypto Sentinel</h3>
+                    <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
+                        Real-time sentiment analyzer for cryptocurrency markets using NLP and Kafka streams.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">NLTK</span>
+                        <span class="tech-badge">Kafka</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <a href="#"
+                        style="display: block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
+                        Explore Project <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card">
+                    <div class="project-img">
+                        <img src="assets/projects/p3.jpg" alt="Autonomous Drone OS">
+                    </div>
+                    <h3>Autonomous Drone OS</h3>
+                    <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
+                        Microkernel-based operating system designed specifically for autonomous delivery drones.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-badge">C++</span>
+                        <span class="tech-badge">Rust</span>
+                        <span class="tech-badge">RTOS</span>
+                    </div>
+                    <a href="#"
+                        style="display: block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
+                        Explore Project <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="navbar-container">
+        <div class="navbar">
+            <a href="index.html" class="navbar-item">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="navbar-item">
+                <i class="ri-user-line"></i>
+                <span>About</span>
+            </a>
+            <a href="projects.html" class="navbar-item active">
+                <i class="ri-code-s-slash-line"></i>
+                <span>Projects</span>
+            </a>
+            <a href="certifications.html" class="navbar-item">
+                <i class="ri-award-line"></i>
+                <span>Certs</span>
+            </a>
+            <a href="contact.html" class="navbar-item">
+                <i class="ri-mail-line"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sourav Upadhyay</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--navbar-border);
+            border-radius: 12px;
+            color: var(--text-color);
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #6C5CE7;
+            box-shadow: 0 0 15px var(--glow-color);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .form-group label {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+        }
+
+        .form-group input:focus+label,
+        .form-group input:not(:placeholder-shown)+label,
+        .form-group textarea:focus+label,
+        .form-group textarea:not(:placeholder-shown)+label {
+            top: -25px;
+            left: 5px;
+            font-size: 0.8rem;
+            opacity: 1;
+            color: #6C5CE7;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            border: none;
+            background: var(--accent-gradient);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px var(--glow-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            opacity: 1;
+            color: #6C5CE7;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-2"></div>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle-btn">
+        <i class="ri-moon-line"></i>
+    </button>
+
+    <main>
+        <section class="reveal">
+            <h2 class="gradient-text" style="font-size: 3rem; text-align: center; margin-bottom: 50px;">Get In Touch
+            </h2>
+            <div class="contact-container card">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="submit-btn shadow-lg">Send Message</button>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="ri-github-line"></i></a>
+                <a href="#" class="social-icon"><i class="ri-linkedin-line"></i></a>
+                <a href="#" class="social-icon"><i class="ri-twitter-x-line"></i></a>
+                <a href="#" class="social-icon"><i class="ri-instagram-line"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <nav class="navbar-container">
+        <div class="navbar">
+            <a href="index.html" class="navbar-item">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="navbar-item">
+                <i class="ri-user-line"></i>
+                <span>About</span>
+            </a>
+            <a href="projects.html" class="navbar-item">
+                <i class="ri-code-s-slash-line"></i>
+                <span>Projects</span>
+            </a>
+            <a href="certifications.html" class="navbar-item">
+                <i class="ri-award-line"></i>
+                <span>Certs</span>
+            </a>
+            <a href="contact.html" class="navbar-item active">
+                <i class="ri-mail-line"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

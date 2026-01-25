@@ -1,0 +1,31 @@
+:root {
+    /* Light Mode */
+    --bg-color: #F6F7FB;
+    --text-color: #2D3436;
+    --accent-gradient: linear-gradient(135deg, #6C5CE7, #00CEC9);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --navbar-bg: rgba(246, 247, 251, 0.4);
+    --navbar-border: rgba(255, 255, 255, 0.5);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --glow-color: rgba(108, 92, 231, 0.3);
+    --beam-color: #6C5CE7;
+    --glass-blur: blur(15px);
+    --transition-speed: 0.4s;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0F0F12;
+    --text-color: #F0F0F0;
+    --accent-gradient: linear-gradient(135deg, #00D2FF, #92FE9D);
+    --card-bg: rgba(28, 28, 32, 0.7);
+    --navbar-bg: rgba(15, 15, 18, 0.4);
+    --navbar-border: rgba(255, 255, 255, 0.15);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --glow-color: rgba(0, 210, 255, 0.3);
+    --beam-color: #00D2FF;
+}
+
+/* Global Transition */
+body {
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
