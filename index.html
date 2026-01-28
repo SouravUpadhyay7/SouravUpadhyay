@@ -18,10 +18,24 @@
 </head>
 
 <body>
-    <div class="blob-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+    <div class="background-wrapper">
+        <div class="grid-background"></div>
+        <div class="scanline"></div>
+        <div class="grain-overlay"></div>
+        <div class="mouse-glow" id="mouse-glow"></div>
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div id="particles-container"></div>
+    </div>
+
+    <div class="decorative-corners">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
     </div>
 
     <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
@@ -33,7 +47,8 @@
             <div class="hero-profile animate-pulse">
                 <img src="assets/images/profile.png" alt="Sourav Upadhyay">
             </div>
-            <h1 class="gradient-text animate-gradient animate-scale-in" style="animation-delay: 0.2s;">Sourav Upadhyay
+            <h1 id="user-name" class="gradient-text animate-gradient animate-scale-in" style="animation-delay: 0.2s;">
+                Sourav Upadhyay
             </h1>
             <p class="animate-slide-in-up" style="animation-delay: 0.4s;">AI/ML Developer, Data Scientist & GenAI
                 Architect
@@ -48,7 +63,7 @@
             <div class="animate-fade-in"
                 style="animation-delay: 0.8s; margin-top: 50px; display: flex; flex-direction: row; justify-content: center; align-items: stretch; gap: 20px; flex-wrap: wrap;">
                 <div class="resume-dropdown">
-                    <button class="resume-btn" style="height: 100%; min-height: 56px;">
+                    <button class="resume-btn magnetic shimmer" style="height: 100%; min-height: 56px;">
                         <i class="ri-file-list-3-line"></i> View My Resume
                     </button>
                     <div class="resume-content">
@@ -58,7 +73,7 @@
                     </div>
                 </div>
 
-                <a href="projects.html" class="card"
+                <a href="projects.html" class="card magnetic"
                     style="margin: 0; padding: 0 35px; text-decoration: none; border-radius: 35px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px;">
                     Explore Projects <i class="ri-arrow-right-line"></i>
                 </a>
