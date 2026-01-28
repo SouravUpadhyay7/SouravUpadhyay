@@ -76,30 +76,36 @@ function initMouseGlow() {
     const glow = document.getElementById('mouse-glow');
     const blobs = document.querySelectorAll('.blob');
     const grid = document.querySelector('.grid-background');
-    if (!glow) return;
+    let ticking = false;
 
     window.addEventListener('mousemove', (e) => {
-        const x = e.clientX;
-        const y = e.clientY;
-        const centerX = window.innerWidth / 2;
-        const centerY = window.innerHeight / 2;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const x = e.clientX;
+                const y = e.clientY;
+                const centerX = window.innerWidth / 2;
+                const centerY = window.innerHeight / 2;
 
-        // Glow positioning
-        glow.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+                // Glow positioning
+                glow.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
 
-        // Subtle blob parallax
-        blobs.forEach((blob, index) => {
-            const speed = (index + 1) * 0.03;
-            const bx = (centerX - x) * speed;
-            const by = (centerY - y) * speed;
-            blob.style.transform = `translate(${bx}px, ${by}px)`;
-        });
+                // Subtle blob parallax
+                blobs.forEach((blob, index) => {
+                    const speed = (index + 1) * 0.03;
+                    const bx = (centerX - x) * speed;
+                    const by = (centerY - y) * speed;
+                    blob.style.transform = `translate(${bx}px, ${by}px)`;
+                });
 
-        // Subtle grid tilt
-        if (grid) {
-            const gx = (centerX - x) * 0.01;
-            const gy = (centerY - y) * 0.01;
-            grid.style.transform = `perspective(500px) rotateX(${60 + gy}deg) rotateZ(${gx}deg) translateY(0)`;
+                // Subtle grid tilt
+                if (grid) {
+                    const gx = (centerX - x) * 0.01;
+                    const gy = (centerY - y) * 0.01;
+                    grid.style.transform = `perspective(500px) rotateX(${60 + gy}deg) rotateZ(${gx}deg) translateY(0)`;
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
     });
 }
@@ -114,10 +120,16 @@ function initMagneticButtons() {
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
 
-            this.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            // Check if it's a large card to handle the base translateY
+            const isHomeCard = this.classList.contains('card') && !this.closest('.grid');
+            const baseT = isHomeCard ? -10 : 0;
+
+            this.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px) translateY(${baseT}px)`;
         });
 
         elem.addEventListener('mouseleave', function () {
+            const isHomeCard = this.classList.contains('card') && !this.closest('.grid');
+            const baseT = isHomeCard ? 0 : 0; // CSS hover handles card rise
             this.style.transform = `translate(0px, 0px)`;
         });
     });

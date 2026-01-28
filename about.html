@@ -12,9 +12,24 @@
 </head>
 
 <body>
-    <div class="blob-container">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+    <div class="background-wrapper">
+        <div class="grid-background"></div>
+        <div class="scanline"></div>
+        <div class="grain-overlay"></div>
+        <div class="mouse-glow" id="mouse-glow"></div>
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div id="particles-container"></div>
+    </div>
+
+    <div class="decorative-corners">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
     </div>
 
     <button id="theme-toggle" class="theme-toggle-btn">
@@ -28,68 +43,71 @@
                 <div class="card">
                     <h3>My Story</h3>
                     <p style="margin-top: 15px; opacity: 0.8;">
-    I am a Computer Science undergraduate specializing in Artificial Intelligence and Machine Learning, with strong
-    hands-on experience in building AI-driven and full-stack applications. I enjoy working with Python, Flask,
-    FastAPI, and modern AI tools like LLMs, RAG, and embeddings to create practical, real-world solutions that solve
-    meaningful problems.
-</p>
+                        I am a Computer Science undergraduate specializing in Artificial Intelligence and Machine
+                        Learning, with strong
+                        hands-on experience in building AI-driven and full-stack applications. I enjoy working with
+                        Python, Flask,
+                        FastAPI, and modern AI tools like LLMs, RAG, and embeddings to create practical, real-world
+                        solutions that solve
+                        meaningful problems.
+                    </p>
 
                 </div>
                 <div class="card">
-    <h3>Core Values</h3>
-    <ul style="margin-top: 15px; opacity: 0.8; list-style: none;">
-        <li>
-            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
-            Learning & Growth
-        </li>
-        <li>
-            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
-            Clean & Scalable Code
-        </li>
-        <li>
-            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
-            Building Useful Products
-        </li>
-    </ul>
-</div>
+                    <h3>Core Values</h3>
+                    <ul style="margin-top: 15px; opacity: 0.8; list-style: none;">
+                        <li>
+                            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
+                            Learning & Growth
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
+                            Clean & Scalable Code
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
+                            Building Useful Products
+                        </li>
+                    </ul>
+                </div>
 
             </div>
         </section>
 
         <section class="reveal" style="margin-top: 60px;">
-    <h2 class="gradient-text">Skills & Technologies</h2>
+            <h2 class="gradient-text">Skills & Technologies</h2>
 
-    <div class="grid">
+            <div class="grid">
 
-        <!-- AI / ML -->
-        <div class="card" style="display: flex; flex-direction: column; align-items: center;">
-            <i class="ri-brain-line" style="font-size: 3rem; margin-bottom: 10px;"></i>
-            <h4>AI / ML</h4>
-            <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
-                Python, Machine Learning, LLMs, RAG, Prompt Engineering, Data Analytics
-            </p>
-        </div>
+                <!-- AI / ML -->
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <i class="ri-brain-line" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                    <h4>AI / ML</h4>
+                    <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
+                        Python, Machine Learning, LLMs, RAG, Prompt Engineering, Data Analytics
+                    </p>
+                </div>
 
-        <!-- Frontend -->
-        <div class="card" style="display: flex; flex-direction: column; align-items: center;">
-            <i class="ri-code-box-line" style="font-size: 3rem; margin-bottom: 10px;"></i>
-            <h4>Frontend</h4>
-            <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
-                HTML5, CSS3, Responsive Design
-            </p>
-        </div>
+                <!-- Frontend -->
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <i class="ri-code-box-line" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                    <h4>Frontend</h4>
+                    <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
+                        HTML5, CSS3, Responsive Design
+                    </p>
+                </div>
 
-        <!-- Backend & Databases -->
-        <div class="card" style="display: flex; flex-direction: column; align-items: center;">
-            <i class="ri-server-line" style="font-size: 3rem; margin-bottom: 10px;"></i>
-            <h4>Backend & Databases</h4>
-            <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
-                FastAPI, REST APIs, MongoDB, Vector Databases
-            </p>
-        </div>
+                <!-- Backend & Databases -->
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <i class="ri-server-line" style="font-size: 3rem; margin-bottom: 10px;"></i>
+                    <h4>Backend & Databases</h4>
+                    <p style="text-align: center; font-size: 0.9rem; opacity: 0.7;">
+                        FastAPI, REST APIs, MongoDB, Vector Databases
+                    </p>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
 
     </main>
 

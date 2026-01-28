@@ -60,8 +60,24 @@
 </head>
 
 <body>
-    <div class="blob-container">
-        <div class="blob blob-1" style="left: auto; right: -100px;"></div>
+    <div class="background-wrapper">
+        <div class="grid-background"></div>
+        <div class="scanline"></div>
+        <div class="grain-overlay"></div>
+        <div class="mouse-glow" id="mouse-glow"></div>
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div id="particles-container"></div>
+    </div>
+
+    <div class="decorative-corners">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
     </div>
 
     <button id="theme-toggle" class="theme-toggle-btn">
@@ -69,59 +85,59 @@
     </button>
 
     <main>
-<section class="reveal">
-    <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 40px;">Professional Certifications</h2>
-    <div class="grid">
-        <!-- Cert 1 -->
-        <div class="cert-card">
-            <img src="assets/certificates/AI_Udemy.jpg" alt="Full stack generative and Agentic AI with python">
-            <div class="cert-overlay">
-                <h4 style="color: var(--text-color);">Full Stack Generative & Agentic AI</h4>
-                <p style="font-size: 0.8rem; opacity: 0.7;">Udemy • Jan 2026 • 32.5 hours</p>
+        <section class="reveal">
+            <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 40px;">Professional Certifications</h2>
+            <div class="grid">
+                <!-- Cert 1 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/AI_Udemy.jpg" alt="Full stack generative and Agentic AI with python">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">Full Stack Generative & Agentic AI</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">Udemy • Jan 2026 • 32.5 hours</p>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/Django_GFG.jpg" alt="Complete Django Web Development Course">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">Django Web Development</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">GeeksforGeeks • 12-week course</p>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/ML_DS_GFG.jpg" alt="Complete Machine Learning & Data Science Program">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">Machine Learning & Data Science</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">GeeksforGeeks • 26-week course</p>
+                    </div>
+                </div>
+                <!-- Cert 4 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/Numpy_Linkedin.jpg" alt="NumPy Essential Training: Foundations">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">NumPy Essential Training</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">LinkedIn Learning • Sept 2024 • 1h 26m</p>
+                    </div>
+                </div>
+                <!-- Cert 5 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/RAG_MongoDB.jpg" alt="Building RAG Apps Using MongoDB">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">RAG with MongoDB</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">MongoDB • Dec 2025</p>
+                    </div>
+                </div>
+                <!-- Cert 6 -->
+                <div class="cert-card">
+                    <img src="assets/certificates/Elements_of_AI.jpg" alt="Elements of AI">
+                    <div class="cert-overlay">
+                        <h4 style="color: var(--text-color);">Elements of AI</h4>
+                        <p style="font-size: 0.8rem; opacity: 0.7;">University of Helsinki • Nov 2023 • 2 ECTS</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Cert 2 -->
-        <div class="cert-card">
-            <img src="assets/certificates/Django_GFG.jpg" alt="Complete Django Web Development Course">
-            <div class="cert-overlay">
-                <h4 style="color: var(--text-color);">Django Web Development</h4>
-                <p style="font-size: 0.8rem; opacity: 0.7;">GeeksforGeeks • 12-week course</p>
-            </div>
-        </div>
-        <!-- Cert 3 -->
-        <div class="cert-card">
-            <img src="assets/certificates/ML_DS_GFG.jpg" alt="Complete Machine Learning & Data Science Program">
-            <div class="cert-overlay">
-                <h4 style="color: var(--text-color);">Machine Learning & Data Science</h4>
-                <p style="font-size: 0.8rem; opacity: 0.7;">GeeksforGeeks • 26-week course</p>
-            </div>
-        </div>
-        <!-- Cert 4 -->
-        <div class="cert-card">
-            <img src="assets/certificates/Numpy_Linkedin.jpg" alt="NumPy Essential Training: Foundations">
-            <div class="cert-overlay">
-                <h4 style="color: var(--text-color);">NumPy Essential Training</h4>
-                <p style="font-size: 0.8rem; opacity: 0.7;">LinkedIn Learning • Sept 2024 • 1h 26m</p>
-            </div>
-        </div>
-        <!-- Cert 5 -->
-        <div class="cert-card">
-            <img src="assets/certificates/RAG_MongoDB.jpg" alt="Building RAG Apps Using MongoDB">
-            <div class="cert-overlay">
-                <h4 style="color: var(--text-color);">RAG with MongoDB</h4>
-                <p style="font-size: 0.8rem; opacity: 0.7;">MongoDB • Dec 2025</p>
-            </div>
-        </div>
-        <!-- Cert 6 -->
-        <div class="cert-card">
-            <img src="assets/certificates/Elements_of_AI.jpg" alt="Elements of AI">
-            <div class="cert-overlay">
-                <h4 style="color: var(--text-color);">Elements of AI</h4>
-                <p style="font-size: 0.8rem; opacity: 0.7;">University of Helsinki • Nov 2023 • 2 ECTS</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
     </main>
 
     <nav class="navbar-container">

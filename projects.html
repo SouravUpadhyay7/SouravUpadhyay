@@ -45,9 +45,24 @@
 </head>
 
 <body>
-    <div class="blob-container">
-        <div class="blob blob-3"></div>
-        <div class="blob blob-2" style="bottom: 0; left: 0;"></div>
+    <div class="background-wrapper">
+        <div class="grid-background"></div>
+        <div class="scanline"></div>
+        <div class="grain-overlay"></div>
+        <div class="mouse-glow" id="mouse-glow"></div>
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div id="particles-container"></div>
+    </div>
+
+    <div class="decorative-corners">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
     </div>
 
     <button id="theme-toggle" class="theme-toggle-btn">
@@ -56,96 +71,103 @@
 
     <main>
         <section class="reveal">
-    <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 40px;">
-        Featured Projects
-    </h2>
+            <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 40px;">
+                Featured Projects
+            </h2>
 
-    <div class="grid">
+            <div class="grid">
 
-        <!-- Project 1 : SnifTern.ai -->
-        <div class="card">
-            <div class="project-img">
-                <img src="assets/projects/sniftern.png" alt="SnifTern.ai">
+                <!-- Project 1 : SnifTern.ai -->
+                <div class="card">
+                    <div class="project-img">
+                        <img src="assets/projects/sniftern.png" alt="SnifTern.ai">
+                    </div>
+
+                    <h3>SnifTern.ai</h3>
+
+                    <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
+                        AI-powered platform to detect fake internship postings and verify company legitimacy using
+                        machine
+                        learning. Supports real-time fraud analysis across LinkedIn, Indeed, and Glassdoor with
+                        multilingual
+                        support and downloadable PDF reports.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Machine Learning</span>
+                        <span class="tech-badge">Flask</span>
+                        <span class="tech-badge">NLP</span>
+                    </div>
+
+                    <a href="https://github.com/SouravUpadhyay7/SnifTern.ai" target="_blank" class="magnetic"
+                        style="display: inline-block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
+                        View on GitHub <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+
+                <!-- Project 2 : Async RAG System -->
+                <div class="card">
+                    <div class="project-img">
+                        <img src="assets/projects/async.png" alt="Async RAG System">
+                    </div>
+
+                    <h3>Asynchronous RAG PDF Q&A System</h3>
+
+                    <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
+                        Production-grade asynchronous Retrieval-Augmented Generation system for PDF-based Q&A. Built
+                        with
+                        FastAPI and Redis Queue, enabling non-blocking APIs, distributed workers, and semantic search
+                        using
+                        vector databases.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">LLMs</span>
+                        <span class="tech-badge">RAG</span>
+                        <span class="tech-badge">Qdrant</span>
+                        <span class="tech-badge">Redis</span>
+                    </div>
+
+                    <a href="https://github.com/SouravUpadhyay7/Rag_Queue_System" target="_blank" class="magnetic"
+                        style="display: inline-block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
+                        View on GitHub <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+
+                <!-- Project 3 : YouTube Mixtape Creator -->
+                <div class="card">
+                    <div class="project-img">
+                        <img src="assets/projects/youutbe.png" alt="Automated YouTube Mixtape Creator">
+                    </div>
+
+                    <h3>Automated YouTube Mixtape Creator</h3>
+
+                    <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
+                        End-to-end automation tool that merges multiple audio tracks into a single mixtape with dynamic
+                        video
+                        backgrounds. Automatically generates timestamped descriptions and abstracts complex FFmpeg
+                        workflows
+                        through a simple user interface.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">FFmpeg</span>
+                        <span class="tech-badge">Automation</span>
+                        <span class="tech-badge">Media Processing</span>
+                    </div>
+
+                    <a href="https://github.com/SouravUpadhyay7/Automated-youtube-mixtape-creator" target="_blank"
+                        class="magnetic"
+                        style="display: inline-block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
+                        View on GitHub <i class="ri-arrow-right-up-line"></i>
+                    </a>
+                </div>
+
             </div>
-
-            <h3>SnifTern.ai</h3>
-
-            <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
-                AI-powered platform to detect fake internship postings and verify company legitimacy using machine
-                learning. Supports real-time fraud analysis across LinkedIn, Indeed, and Glassdoor with multilingual
-                support and downloadable PDF reports.
-            </p>
-
-            <div class="tech-stack">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">Machine Learning</span>
-                <span class="tech-badge">Flask</span>
-                <span class="tech-badge">NLP</span>
-            </div>
-
-            <a href="https://github.com/SouravUpadhyay7/SnifTern.ai" target="_blank"
-                style="display: block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
-                View on GitHub <i class="ri-arrow-right-up-line"></i>
-            </a>
-        </div>
-
-        <!-- Project 2 : Async RAG System -->
-        <div class="card">
-            <div class="project-img">
-                <img src="assets/projects/async.png" alt="Async RAG System">
-            </div>
-
-            <h3>Asynchronous RAG PDF Q&A System</h3>
-
-            <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
-                Production-grade asynchronous Retrieval-Augmented Generation system for PDF-based Q&A. Built with
-                FastAPI and Redis Queue, enabling non-blocking APIs, distributed workers, and semantic search using
-                vector databases.
-            </p>
-
-            <div class="tech-stack">
-                <span class="tech-badge">FastAPI</span>
-                <span class="tech-badge">LLMs</span>
-                <span class="tech-badge">RAG</span>
-                <span class="tech-badge">Qdrant</span>
-                <span class="tech-badge">Redis</span>
-            </div>
-
-            <a href="https://github.com/SouravUpadhyay7/Rag_Queue_System" target="_blank"
-                style="display: block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
-                View on GitHub <i class="ri-arrow-right-up-line"></i>
-            </a>
-        </div>
-
-        <!-- Project 3 : YouTube Mixtape Creator -->
-        <div class="card">
-            <div class="project-img">
-                <img src="assets/projects/youutbe.png" alt="Automated YouTube Mixtape Creator">
-            </div>
-
-            <h3>Automated YouTube Mixtape Creator</h3>
-
-            <p style="margin: 15px 0; opacity: 0.8; font-size: 0.95rem;">
-                End-to-end automation tool that merges multiple audio tracks into a single mixtape with dynamic video
-                backgrounds. Automatically generates timestamped descriptions and abstracts complex FFmpeg workflows
-                through a simple user interface.
-            </p>
-
-            <div class="tech-stack">
-                <span class="tech-badge">Python</span>
-                <span class="tech-badge">FFmpeg</span>
-                <span class="tech-badge">Automation</span>
-                <span class="tech-badge">Media Processing</span>
-            </div>
-
-            <a href="https://github.com/SouravUpadhyay7/Automated-youtube-mixtape-creator" target="_blank"
-                style="display: block; margin-top: 20px; color: var(--text-color); font-weight: 600; text-decoration: none;">
-                View on GitHub <i class="ri-arrow-right-up-line"></i>
-            </a>
-        </div>
-
-    </div>
-</section>
+        </section>
 
     </main>
 
