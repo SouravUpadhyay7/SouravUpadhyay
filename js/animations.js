@@ -47,13 +47,15 @@ function initParticles() {
     const container = document.getElementById('particles-container');
     if (!container) return;
 
-    const particleCount = 40;
+    // Reduce particle count on mobile for better performance
+    const isMobile = window.innerWidth <= 768;
+    const particleCount = isMobile ? 15 : 40;
 
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'particle';
 
-        const size = Math.random() * 4 + 2;
+        const size = Math.random() * (isMobile ? 2 : 4) + 2;
         const duration = Math.random() * 10 + 10;
         const tx = (Math.random() - 0.5) * 200;
         const ty = (Math.random() - 0.5) * 200;
@@ -73,6 +75,11 @@ function initParticles() {
 
 // Mouse Follow Glow Effect
 function initMouseGlow() {
+    // Disable on touch devices for better performance
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        return;
+    }
+
     const glow = document.getElementById('mouse-glow');
     const blobs = document.querySelectorAll('.blob');
     const grid = document.querySelector('.grid-background');
