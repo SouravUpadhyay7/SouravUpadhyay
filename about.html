@@ -37,40 +37,69 @@
     </button>
 
     <main>
-        <section class="reveal">
+        <section class="reveal about-section">
             <h2 class="gradient-text" style="font-size: 3rem; margin-bottom: 20px;">About Me</h2>
-            <div class="grid">
+            <div class="grid about-grid">
                 <div class="card">
                     <h3>My Story</h3>
-                    <p style="margin-top: 15px; opacity: 0.8;">
-                        I am a Computer Science undergraduate specializing in Artificial Intelligence and Machine
-                        Learning, with strong
-                        hands-on experience in building AI-driven and full-stack applications. I enjoy working with
-                        Python, Flask,
-                        FastAPI, and modern AI tools like LLMs, RAG, and embeddings to create practical, real-world
-                        solutions that solve
-                        meaningful problems.
+                    <p style="margin-top: 15px; opacity: 0.85; line-height: 1.75;">
+                        I am a Computer Science undergraduate driven by the idea that cutting-edge AI should solve real
+                        problems. I build full-stack projects powered by machine learning models, with a special focus on
+                        generative AI, RAG workflows, and scalable APIs.
                     </p>
-
-                </div>
-                <div class="card">
-                    <h3>Core Values</h3>
-                    <ul style="margin-top: 15px; opacity: 0.8; list-style: none;">
-                        <li>
-                            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
-                            Learning & Growth
-                        </li>
-                        <li>
-                            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
-                            Clean & Scalable Code
-                        </li>
-                        <li>
-                            <i class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i>
-                            Building Useful Products
-                        </li>
+                    <ul style="margin-top: 20px; opacity: 0.85; list-style: none; padding-left: 0;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><i
+                                class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i> Python & ML-first architecture</li>
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><i
+                                class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i> FastAPI / Flask for high-throughput APIs</li>
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;"><i
+                                class="ri-checkbox-circle-line" style="color: var(--glow-color);"></i> Data-driven product thinking with metrics</li>
                     </ul>
+                    <p style="margin-top: 18px; opacity: 0.8; font-style: italic;">
+                        “I turn ideas into deployable systems that are reliable, efficient, and aligned to user needs.”
+                    </p>
                 </div>
 
+                <div class="card">
+                    <h3>Quick Facts</h3>
+                    <div class="about-stats" style="margin-top: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+                        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px;"> 
+                            <strong style="font-size: 1.6rem;">6+</strong>
+                            <p style="margin: 5px 0 0; opacity: 0.8;">Real Projects</p>
+                        </div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px;">
+                            <strong style="font-size: 1.6rem;">2+</strong>
+                            <p style="margin: 5px 0 0; opacity: 0.8;">AI Systems</p>
+                        </div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px;">
+                            <strong style="font-size: 1.6rem;">1k+</strong>
+                            <p style="margin: 5px 0 0; opacity: 0.8;">LeetCode Problems</p>
+                        </div>
+                        <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px;">
+                            <strong style="font-size: 1.6rem;">100%</strong>
+                            <p style="margin: 5px 0 0; opacity: 0.8;">Attention to detail</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 18px; opacity: 0.85; line-height: 1.7;">More than code, I focus on creating sustainable systems with readable code, automated testing, and predictable performance.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 20px;">
+                <div class="card" style="text-align: center; padding: 25px;">
+                    <i class="ri-lightbulb-flash-line" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
+                    <h4>Innovation Focus</h4>
+                    <p style="opacity: 0.8;">I leverage modern AI components to design smarter features.</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 25px;">
+                    <i class="ri-rocket-line" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
+                    <h4>Engineered for scale</h4>
+                    <p style="opacity: 0.8;">I build robust pipelines so models and data can grow safely.</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 25px;">
+                    <i class="ri-team-line" style="font-size: 2.2rem; margin-bottom: 10px;"></i>
+                    <h4>Collaboration</h4>
+                    <p style="opacity: 0.8;">Clear communication and shared ownership are core to every sprint.</p>
+                </div>
             </div>
         </section>
 
@@ -124,6 +153,10 @@
             <a href="projects.html" class="navbar-item">
                 <i class="ri-code-s-slash-line"></i>
                 <span>Projects</span>
+            </a>
+            <a href="coding-stats.html" class="navbar-item">
+                <i class="ri-bar-chart-2-line"></i>
+                <span>Stats</span>
             </a>
             <a href="certifications.html" class="navbar-item">
                 <i class="ri-award-line"></i>

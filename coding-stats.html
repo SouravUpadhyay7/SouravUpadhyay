@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Stats | Sourav Upadhyay</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        .coding-stats-container {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.6s ease 0.2s both;
+        }
+
+        .stats-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stats-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 50px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease forwards;
+            /* Neumorphism styling with glassomorphism */
+            box-shadow: 
+                8px 8px 16px rgba(0, 0, 0, 0.2),
+                -8px -8px 16px rgba(255, 255, 255, 0.05),
+                inset 0 1px 3px rgba(255, 255, 255, 0.15),
+                inset 0 -1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.3s; }
+        .stat-card:nth-child(2) { animation-delay: 0.4s; }
+        .stat-card:nth-child(3) { animation-delay: 0.5s; }
+        .stat-card:nth-child(4) { animation-delay: 0.6s; }
+
+        .stat-card:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 
+                12px 12px 24px rgba(0, 0, 0, 0.25),
+                -12px -12px 24px rgba(255, 255, 255, 0.08),
+                inset 0 1px 3px rgba(255, 255, 255, 0.2),
+                inset 0 -1px 3px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 2px solid var(--accent-color);
+            overflow: hidden;
+        }
+
+        .platform-logo {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+
+        .stat-card:hover .logo-placeholder {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 30px var(--glow-color);
+        }
+
+        .platform-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .platform-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .stat-label {
+            text-align: left;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .view-profile-btn {
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: var(--accent-gradient);
+            color: var(--bg-color);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 
+                0 8px 16px rgba(0, 255, 255, 0.3),
+                inset 0 1px 3px rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .view-profile-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 
+                0 12px 24px rgba(0, 255, 255, 0.5),
+                inset 0 1px 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .view-profile-btn:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .coding-stats-container {
+                padding: 60px 15px;
+            }
+
+            .stats-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .logo-placeholder {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+
+            .stat-card {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-wrapper">
+        <div class="grid-background"></div>
+        <div class="scanline"></div>
+        <div class="grain-overlay"></div>
+        <div class="mouse-glow" id="mouse-glow"></div>
+        <div class="blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div id="particles-container"></div>
+    </div>
+
+    <div class="decorative-corners">
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+        <i class="ri-moon-line"></i>
+    </button>
+
+    <main>
+        <section class="coding-stats-container">
+            <div class="stats-header">
+                <h1>Coding Profiles & Competitive Stats</h1>
+                <p>Track my journey across competitive programming platforms. From algorithm mastery to problem-solving excellence, here's where I push my coding boundaries and stay sharp in the competitive programming arena.</p>
+            </div>
+
+            <div class="stats-grid">
+                <!-- LeetCode Card -->
+                <div class="stat-card">
+                    <div class="logo-placeholder">
+                        <img src="assets/logos/leetcode.svg" alt="LeetCode" class="platform-logo">
+                    </div>
+                    <div class="platform-name">LeetCode</div>
+                    <p class="platform-description">Master algorithm challenges and data structure problems</p>
+                    <div class="stat-item">
+                        <span class="stat-label">Problems Solved:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Ranking:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <a href="#" class="view-profile-btn">Visit Profile</a>
+                </div>
+
+                <!-- CodeForces Card -->
+                <div class="stat-card">
+                    <div class="logo-placeholder">
+                        <img src="assets/logos/codeforces.svg" alt="CodeForces" class="platform-logo">
+                    </div>
+                    <div class="platform-name">CodeForces</div>
+                    <p class="platform-description">Compete in real-time contests and climb the rating ladder</p>
+                    <div class="stat-item">
+                        <span class="stat-label">Current Rating:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Contests:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <a href="#" class="view-profile-btn">Visit Profile</a>
+                </div>
+
+                <!-- CodeChef Card -->
+                <div class="stat-card">
+                    <div class="logo-placeholder">
+                        <img src="assets/logos/codechef.svg" alt="CodeChef" class="platform-logo">
+                    </div>
+                    <div class="platform-name">CodeChef</div>
+                    <p class="platform-description">Solve diverse problems and build consistent coding habits</p>
+                    <div class="stat-item">
+                        <span class="stat-label">Problems Solved:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Rating:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <a href="#" class="view-profile-btn">Visit Profile</a>
+                </div>
+
+                <!-- GeeksforGeeks Card -->
+                <div class="stat-card">
+                    <div class="logo-placeholder">
+                        <img src="assets/logos/geeksforgeeks.svg" alt="GeeksforGeeks" class="platform-logo">
+                    </div>
+                    <div class="platform-name">GeeksforGeeks</div>
+                    <p class="platform-description">Learn and contribute to the developer community</p>
+                    <div class="stat-item">
+                        <span class="stat-label">Problems Solved:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Score:</span>
+                        <span class="stat-value">Coming Soon</span>
+                    </div>
+                    <a href="#" class="view-profile-btn">Visit Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="navbar-container">
+        <div class="navbar">
+            <a href="index.html" class="navbar-item">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="navbar-item">
+                <i class="ri-user-line"></i>
+                <span>About</span>
+            </a>
+            <a href="projects.html" class="navbar-item">
+                <i class="ri-code-s-slash-line"></i>
+                <span>Projects</span>
+            </a>
+            <a href="coding-stats.html" class="navbar-item active">
+                <i class="ri-bar-chart-2-line"></i>
+                <span>Stats</span>
+            </a>
+            <a href="certifications.html" class="navbar-item">
+                <i class="ri-award-line"></i>
+                <span>Certs</span>
+            </a>
+            <a href="contact.html" class="navbar-item">
+                <i class="ri-mail-line"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
