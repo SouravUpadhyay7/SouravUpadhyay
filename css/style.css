@@ -345,3 +345,133 @@ section {
         height: 150px;
     }
 }
+
+/* InfereEx Button Styles */
+.inferex-btn {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 35px;
+    color: var(--text-color);
+    padding: 0 35px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.inferex-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.inferex-btn:active {
+    transform: translateY(0);
+}
+
+/* InfereEx Badge Styles */
+.inferex-badge {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.inferex-badge:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+}
+
+.inferex-badge i {
+    font-size: 1rem;
+}
+
+.inferex-badge:active {
+    transform: translateY(0);
+}
+
+.inferex-badge {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 28px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.inferex-badge:hover {
+    background: rgba(255, 255, 255, 0.17);
+    border-color: rgba(255, 255, 255, 0.32);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.inferex-badge i {
+    font-size: 1.1rem;
+}
+
+.inferex-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.inferex-text-wrapper small {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+/* Mobile adjustments for badge */
+@media (max-width: 768px) {
+    .inferex-badge {
+        top: 18px;
+        left: 18px;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 22px;
+    }
+
+    .inferex-text-wrapper small {
+        display: none;
+    }
+}
